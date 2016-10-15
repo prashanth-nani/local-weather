@@ -1,0 +1,12 @@
+#container{
+  width: 70%;
+  min-height: 30vh;
+  border: 2px solid black;
+  margin: 0 auto;
+  margin-top: 150px;
+}
+
+#icon{
+  height: 50px;
+  width: 50px;
+}
