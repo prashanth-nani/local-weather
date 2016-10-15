@@ -2,7 +2,7 @@ var lat, lon, tempc, weather;
 
 $(function(){
   $.getJSON("http://ip-api.com/json", function(data){
-    $('#loc').html("<b>City:</b> "+data.city+", "+data.country);
+    $('#loc').html(data.city+", "+data.country);
 
     lat = data.lat;
     lon = data.lon;
@@ -31,8 +31,8 @@ function getWeather(param){
     weather = data.weather[0].main;
     iconlink = "http://openweathermap.org/img/w/"+data.weather[0].icon + ".png";
 
-    $('#temp').html("<b>Temperature:</b> "+tempc+" &deg;C");
-    $('#weather').html("<b>Weather:</b> "+weather);
+    $('#temp').html(tempc+" &deg;C");
+    $('#weather').html(weather);
     $('#icon').attr('src', iconlink);
   });
 }
